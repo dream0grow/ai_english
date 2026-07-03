@@ -1,0 +1,127 @@
+/* 모바일 우선 — 아이도 쓰므로 큰 글자, 큰 터치 타깃, 밝은 색 */
+:root {
+  --brand: #4F6DF5;
+  --brand-dark: #3A54C4;
+  --bg: #F5F7FF;
+  --card: #FFFFFF;
+  --ink: #222639;
+  --sub: #7A8099;
+  --user: #4F6DF5;
+  --ok: #2FA96E;
+  --fix: #E8912D;
+  --rec: #E5484D;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px calc(10px);
+  background: var(--card);
+  box-shadow: 0 1px 4px rgb(34 38 57 / 8%);
+  padding-top: calc(14px + env(safe-area-inset-top));
+}
+.title { display: flex; align-items: center; gap: 10px; }
+.logo { font-size: 30px; }
+h1 { font-size: 20px; }
+#status { font-size: 13px; color: var(--sub); }
+#resetBtn {
+  border: 1.5px solid var(--brand); color: var(--brand); background: none;
+  border-radius: 20px; padding: 8px 14px; font-size: 14px; font-weight: 600;
+}
+
+main {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+.bubble {
+  max-width: 85%; padding: 12px 14px; border-radius: 18px;
+  font-size: 17px; line-height: 1.45; word-break: break-word;
+  animation: pop .15s ease-out;
+}
+@keyframes pop { from { transform: scale(.96); opacity: .5; } }
+.bubble.user {
+  align-self: flex-end; background: var(--user); color: #fff;
+  border-bottom-right-radius: 6px;
+}
+.bubble.ai {
+  align-self: flex-start; background: var(--card);
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 1px 3px rgb(34 38 57 / 10%);
+}
+.bubble.thinking { color: var(--sub); font-style: italic; }
+
+/* 발화 정오 아이콘 (Langua/Speak 벤치마크: 메시지 옆 ✓/✎) */
+.row { display: flex; flex-direction: column; }
+.row.user-row { align-items: flex-end; }
+.mark { font-size: 13px; margin: 3px 6px 0; font-weight: 700; }
+.mark.ok { color: var(--ok); }
+.mark.fix { color: var(--fix); }
+
+/* 교정 접기 패널 (취소선 + 굵게 + 탭하면 한국어 설명) */
+details.corrections {
+  align-self: flex-start; max-width: 85%;
+  background: #FFF6E9; border: 1px solid #F3D9AE; border-radius: 14px;
+  padding: 10px 14px; font-size: 15px;
+}
+details.corrections summary {
+  cursor: pointer; font-weight: 700; color: var(--fix); list-style: none;
+}
+details.corrections summary::before { content: "📝 "; }
+.corr-item { margin-top: 10px; }
+.corr-item .orig { text-decoration: line-through; color: var(--sub); }
+.corr-item .fixed { font-weight: 700; color: var(--ink); }
+.corr-item .note { font-size: 13px; color: var(--sub); margin-top: 3px; }
+
+footer {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 12px 0 calc(16px + env(safe-area-inset-bottom));
+  background: linear-gradient(transparent, var(--bg) 30%);
+}
+#micBtn {
+  width: 84px; height: 84px; border-radius: 50%;
+  border: none; background: var(--brand); color: #fff;
+  display: grid; place-items: center;
+  box-shadow: 0 6px 18px rgb(79 109 245 / 40%);
+  touch-action: none; -webkit-user-select: none; user-select: none;
+  transition: transform .1s, background .15s;
+}
+#micBtn:active { transform: scale(.94); }
+#micBtn.recording {
+  background: var(--rec);
+  box-shadow: 0 0 0 8px rgb(229 72 77 / 18%);
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  50% { box-shadow: 0 0 0 16px rgb(229 72 77 / 8%); }
+}
+#micBtn.busy { background: #A9B4D8; }
+.hint { font-size: 12.5px; color: var(--sub); }
+
+.modal {
+  position: fixed; inset: 0; background: rgb(0 0 0 / 45%);
+  display: grid; place-items: center; padding: 24px; z-index: 10;
+}
+.modal.hidden { display: none; }
+.modal-card {
+  background: var(--card); border-radius: 20px; padding: 22px;
+  width: 100%; max-width: 420px; max-height: 80dvh; overflow-y: auto;
+}
+.modal-card h2 { font-size: 19px; margin-bottom: 12px; }
+#reportBody { font-size: 15px; }
+#reportBody .corr-item { padding: 8px 0; border-bottom: 1px solid #EEF0F8; }
+#reportClose {
+  margin-top: 16px; width: 100%; padding: 12px; border: none;
+  background: var(--brand); color: #fff; border-radius: 12px;
+  font-size: 16px; font-weight: 700;
+}

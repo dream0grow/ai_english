@@ -1,0 +1,16 @@
+# AI English — 집 서버 의존성
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+python-dotenv>=1.0
+
+# STT (오픈소스 Whisper)
+faster-whisper>=1.0
+
+# TTS (Kokoro-82M, espeak-ng 시스템 패키지 필요)
+kokoro>=0.9
+soundfile>=0.12
+numpy
+
+# Claude 대화 (구독 OAuth 토큰 인증)
+claude-agent-sdk>=0.1.0

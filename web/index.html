@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#4F6DF5" />
+  <title>AI English — Emma</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="title">
+      <span class="logo">💬</span>
+      <div>
+        <h1>Emma</h1>
+        <p id="status">버튼을 누르고 영어로 말해보세요</p>
+      </div>
+    </div>
+    <button id="resetBtn" title="새 대화 시작">새 대화</button>
+  </header>
+
+  <main id="chat" aria-live="polite"></main>
+
+  <footer>
+    <button id="micBtn" aria-label="누르고 말하기">
+      <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-hidden="true">
+        <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
+      </svg>
+    </button>
+    <p class="hint" id="hint">누르는 동안 녹음 · 한 번 탭하면 녹음 시작/정지</p>
+  </footer>
+
+  <div id="reportModal" class="modal hidden">
+    <div class="modal-card">
+      <h2>📝 오늘의 리포트</h2>
+      <div id="reportBody"></div>
+      <button id="reportClose">닫기</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

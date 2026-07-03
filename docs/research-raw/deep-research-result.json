@@ -1,0 +1,289 @@
+{
+  "question": "AI 영어 회화(스피킹) 학습 앱 시장 비교 조사. 목적: 가족용(초등 3~5 수준 아이 + 성인) 자가구축 앱의 벤치마킹과 셀링포인트 도출. 조사 대상: AI와 음성으로 영어 대화하며 배우는 앱 10개 (예: Speak/스픽, ELSA Speak, TalkPal, Praktika, Loora, Duolingo Max, Langua, Gliglish, Univerbal, 말해보카, Cake 등에서 실제 대화형 AI 스피킹 중심 10개 선정, 한국 시장 이용 가능 여부 포함). 각 앱별로: (1) 월/연 구독 가격(한국 기준, 2025-2026 최신) (2) 핵심 기능 — 특히 문법 교정 방식(즉시 지적 vs 자연스러운 recast), 발음 피드백, 복습/단어장, 아이 사용 적합성, 슬랭/구어체 학습 (3) 언어 습득 효과성 근거(연구, 사용자 리뷰, CEFR 향상 주장) (4) UI/UX 특징과 강점(온보딩, 대화 화면 디자인, 게이미피케이션, 학습 동기 유지 장치) (5) 사용자들이 불만하는 페인포인트(앱스토어 리뷰, 레딧 등). 마지막으로: 가격 대비 효과성 순위표, 벤치마킹할 UI/기능 요소 목록, 기존 앱들이 해결 못하는 공통 페인포인트 정리.",
+  "summary": "Synthesis step was skipped or failed — returning 20 verified claims unmerged.",
+  "findings": [],
+  "confirmed": [
+    {
+      "claim": "The review systematically analyzed 24 empirical studies (published 2017-2023 in SSCI journals) on AI chatbot use for EFL speaking practice, making it one of the larger evidence bases for claims that conversational AI apps improve speaking skills.",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2666920X24000316",
+      "quote": "The systematic review examined empirical evidence of chatbot applications from 24 research studies conducted in an English-speaking learning environment and published between 2017 and 2023.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "Voice-based AI chatbots expand oral practice opportunities and create a lower-pressure environment that supports sustained English dialogue, which supports the core value proposition of AI speaking apps for both children and adults.",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2666920X24000316",
+      "quote": "voice chatbots can enrich EFL learners' experiences by expanding opportunities in English oral practice and provide a more comfortable and relaxed environment for meaningful and sustained English dialogues.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "The review identifies unresolved gaps in current chatbot apps — sustaining learner motivation long-term and lack of context-aware personalization — which map directly onto common user pain points that a new family-built app could target.",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2666920X24000316",
+      "quote": "Future chatbot designs need to become more \"intelligent\" by understanding learners' environments, providing personalized services, and offering contextually aware topics for English oral practice... more attention should be placed on maintaining the driving force of learning English speaking with chatbots long-term.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "In Duolingo's 2021 speaking efficacy study (DRR-21-02), 66% of Spanish learners and 53% of French learners who completed the beginner-level (through Unit 5 / A2) course content achieved CEFR A2 or above in speaking on the Pearson Versant Spanish/French tests (n=156 Spanish, n=102 French valid scores).",
+      "source": "https://www.duolingo.com/efficacy/studies",
+      "quote": "about two-thirds of the participants (66%) in Spanish and more than half of the participants (53%) in French achieved the level of A2 or above in speaking.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "Duolingo's own 2024 four-skills study (DRR-24-04, Apr 26, 2024, STAMP 4S tests) shows speaking is the weakest skill: after completing all A2 content, Spanish learners' reading was Intermediate High but speaking only 'approaching Intermediate Low' — evidence that even post-redesign Duolingo underdelivers on speaking relative to receptive skills.",
+      "source": "https://www.duolingo.com/efficacy/studies",
+      "quote": "Learners in the Spanish course achieved an overall proficiency level of Intermediate Mid according to the ACTFL scale, with reading at Intermediate High, listening at Intermediate Mid, writing at Intermediate Low, and speaking approaching Intermediate Low.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "A peer-reviewed PLOS ONE study (Jan 2025) of 205 English-major students at a Vietnamese university found a high level of learner satisfaction with ELSA Speak when used in English pronunciation courses.",
+      "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11717304/",
+      "quote": "Two hundred and five English major students at a Vietnamese higher education institution were surveyed by a 23-item questionnaire classified into four variables: perceived usefulness, perceived ease of use, confirmation, and satisfaction. The findings recorded a high level of satisfaction among participants.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "The study is a satisfaction/acceptance survey (perceived usefulness, ease of use, confirmation, satisfaction), not a measurement of actual pronunciation or CEFR proficiency improvement, so it provides only indirect evidence of ELSA Speak's learning effectiveness.",
+      "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11717304/",
+      "quote": "surveyed by a 23-item questionnaire classified into four variables: perceived usefulness, perceived ease of use, confirmation, and satisfaction",
+      "vote": "3-0"
+    },
+    {
+      "claim": "A peer-reviewed systematic review of 30 empirical studies (2020-2024) found that AI chatbot use produces notable improvements in L2 learners' productive skills, with speaking and writing showing the strongest gains — direct academic evidence that conversational AI speaking practice is effective.",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2215039025000086",
+      "quote": "The review synthesizes findings from 30 empirical studies published between 2020 and 2024... Results indicate notable improvements in learners' productive and receptive skills, especially in speaking and writing.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "The mechanisms driving speaking improvement with AI chatbots are real-time feedback, reduction of speaking anxiety, and increased practice opportunities — features a family self-built app should prioritize to replicate proven effectiveness.",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2215039025000086",
+      "quote": "due to features such as real-time feedback, anxiety reduction, and increase practice opportunities",
+      "vote": "3-0"
+    },
+    {
+      "claim": "Among the 5 AI speaking apps tested (Langua, Speak, Praktika, Univerbal, Talkpal), the reviewer ranks Langua as best overall, specifically citing its conversation depth, voice quality, feedback, and vocabulary review system; Langua Unlimited is priced at $29.99/month or $199.99/year (affiliate code reduces to $159.99/year).",
+      "source": "https://lingtuitive.com/blog/best-ai-speaking-apps",
+      "quote": "Langua is the best overall for most learners — its conversation depth, voice quality, feedback, and vocab review system are unmatched. ... Langua Unlimited: $29.99/month or $199.99/year → $159.99/year with code LINGTUITIVE20",
+      "vote": "3-0"
+    },
+    {
+      "claim": "All five tested apps use a similar visual correction pattern (bold corrected words, strikethrough on mistakes, or corrected version shown underneath), with Langua and Speak adding a per-message correctness indicator symbol and Langua offering tap-to-expand grammar explanations ('Explain this feedback') — a benchmarkable UI pattern for grammar-correction display.",
+      "source": "https://lingtuitive.com/blog/best-ai-speaking-apps",
+      "quote": "All of the tested apps provide feedback on mistakes in quite similar fashion — highlighting corrected words in bold, crossing out mistakes with strikethrough, or simply providing a corrected version underneath. ... Langua and Speak both have a small symbol next to the message to indicate whether what you said was correct or contained a mistake",
+      "vote": "3-0"
+    },
+    {
+      "claim": "Talkpal's main pain points in hands-on testing were inaccurate pronunciation scores, conversations that stayed shallow because the AI never volunteered its own opinions unless asked, corrections that were hard to scan due to lack of highlighting, and voice inconsistency (voices switching between male and female mid-message in Cantonese).",
+      "source": "https://lingtuitive.com/blog/best-ai-speaking-apps",
+      "quote": "Talkpal's pronunciation scores weren't very accurate. Talkpal's lack of highlighting corrections was harder to scan. ... Talkpal was unpredictable, with Cantonese voices sometimes switching between male and female mid-message.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "Praktika's pronunciation feedback is unreliable: in the reviewer's testing it marked intentionally mispronounced speech as correct.",
+      "source": "https://languatalk.com/blog/praktika-review/",
+      "quote": "Pronunciation feedback is not reliable - it would often tell you that you were correct when you intentionally made major errors.",
+      "vote": "2-1"
+    },
+    {
+      "claim": "Praktika lacks a vocabulary retention system — there is no spaced repetition and no long-term tracking of saved vocabulary, a gap for learners wanting a review/wordbook workflow.",
+      "source": "https://languatalk.com/blog/praktika-review/",
+      "quote": "Praktika offers no spaced repetition or long-term tracking of saved vocabulary, and custom lesson options are limited compared to competitors.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "A reviewed two-week experiment in which teenage EFL learners conversed with the Google Assistant chatbot showed significant improvement in willingness to communicate in English and reduced oral anxiety, providing concrete evidence that even short-term AI voice practice benefits younger learners.",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2666920X24000316",
+      "quote": "a two-week experiment with teenage EFL learners using Google Assistant chatbot showed significant improvement in students' willingness to engage in English communication, particularly in reducing oral anxiety.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "The speaking study's participants had little to no prior knowledge of the target language and used Duolingo as their only learning tool, so the A2 speaking outcomes are attributed to app-only learning without classes or other apps.",
+      "source": "https://www.duolingo.com/efficacy/studies",
+      "quote": "the speaking skills of Duolingo learners, who had little to no prior knowledge in the target language and used Duolingo as the only language learning tool, were in line with Duolingo's course expectations. Specifically, most of the study participants achieved the level of A2 or above on the CEFR scale.",
+      "vote": "2-1"
+    },
+    {
+      "claim": "Duolingo's DRR-21-03 study (Nov 11, 2021; n=340 adult learners) found that learners completing the first seven units of Spanish or French reached ACTFL Intermediate Mid/High in reading and Intermediate Low in listening, comparable to US university students after five semesters — a receptive-skills claim, not a speaking claim.",
+      "source": "https://www.duolingo.com/efficacy/studies",
+      "quote": "The participants of the study reached Intermediate Mid/High in reading and Intermediate Low in listening on the ACTFL scale. Their reading and listening scores were comparable with those of university students at the end of the fifth semester of study as reported in Tschirner (2016).",
+      "vote": "3-0"
+    },
+    {
+      "claim": "In the 2021 speaking study, pronunciation was the lowest Versant subscore for French learners (mean 30.37, A1 range) versus the highest for Spanish learners (mean 45.67), and about 28% of French test completers could not be scored — suggesting the app's speech-recognition practice did not produce intelligible French pronunciation for many learners.",
+      "source": "https://www.duolingo.com/efficacy/studies",
+      "quote": "the subscores of the speaking tests indicated a strong contrast on pronunciation skills of the participants in Spanish and French. Among the subscores, pronunciation scored the highest in Spanish but the lowest in French.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "In the study's model, 'confirmation' (the app meeting users' prior expectations) was the strongest predictor of satisfaction with ELSA Speak, ahead of perceived ease of use.",
+      "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11717304/",
+      "quote": "Although both perceived ease of use and confirmation showed a considerable impact on learners' satisfaction, confirmation was reported to be the determining antecedent of satisfaction.",
+      "vote": "3-0"
+    },
+    {
+      "claim": "Perceived usefulness of ELSA Speak did NOT directly and significantly correlate with learners' satisfaction — satisfaction was driven by expectation-confirmation and ease of use rather than perceived learning benefit.",
+      "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11717304/",
+      "quote": "However, perceived usefulness did not have a directly significant correlation with learners' satisfaction.",
+      "vote": "2-0"
+    }
+  ],
+  "refuted": [
+    {
+      "claim": "Roughly half of the reviewed studies found that AI chatbots reduce learners' speaking anxiety, positioning anxiety reduction as the most consistently evidenced benefit of AI conversation apps rather than direct proficiency gains.",
+      "vote": "0-3",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2666920X24000316"
+    },
+    {
+      "claim": "Speak is rated the best AI speaking app for complete beginners because of its structured lesson path with automatic targeting of weak areas via smart review drills, and its Premium annual plan costs $83.99/year (under $7/month) — the cheapest of the apps compared.",
+      "vote": "0-3",
+      "source": "https://lingtuitive.com/blog/best-ai-speaking-apps"
+    },
+    {
+      "claim": "Praktika has no month-to-month subscription option — after a short free trial, users must commit to either a 3-month plan or an annual plan, with pricing varying by country, and all features (avatars, learning paths, full topic library) sit in a single subscription tier with no upsells.",
+      "vote": "0-3",
+      "source": "https://languatalk.com/blog/praktika-review/"
+    },
+    {
+      "claim": "Praktika's grammar correction is delivered via a per-utterance 'Feedback' button that appears even when no mistake was made, and there is no end-of-lesson summary, categorized error list, or follow-up review exercises — errors do not influence future lessons.",
+      "vote": "1-2",
+      "source": "https://languatalk.com/blog/praktika-review/"
+    }
+  ],
+  "unverified": [
+    {
+      "claim": "The authors recommend ELSA Speak be deployed in pronunciation courses only with curated content and teacher support as a facilitator — i.e., not as a fully standalone learning tool.",
+      "erroredVotes": 3,
+      "validVotes": 0,
+      "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11717304/"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://lingostar.ai/best-ai-language-learning-app/",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.talkio.ai/blog/best-ai-language-speaking-practice-apps-in-2026",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://unstar.app/blog/is-speak-elsa-talkpal-loora-learna-ai-english-apps-legit-2026",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://kippy.ai/blog/best-ai-language-learning-apps-comparison",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://practiceme.app/blog/ai-language-learning-apps-guide",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=ai.talkpal",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://blog.talkme.ai/archives/2026-ai-english-speaking-apps-complete-comparison-guide",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.speak.com/ko",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://blog.podospeaking.com/AI-%ED%9A%8C%ED%99%94-%EC%95%B1-3%EC%A2%85-%EB%B9%84%EA%B5%90-%EC%8A%A4%ED%94%BD,-%EB%A7%90%ED%95%B4%EB%B3%B4%EC%B9%B4,-%ED%8F%AC%EB%8F%84%EC%8A%A4%ED%94%BC%ED%82%B9/",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.clien.net/service/board/use/18888760",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://apps.apple.com/kr/app/%EC%8A%A4%ED%94%BD-speak-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1286609883",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.ringleplus.com/en/student/landing/blog/ai-eng-speak",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://languatalk.com/blog/whats-the-best-ai-for-language-learning/",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://talkpal.ai/praktika-vs-elsa-speak-which-language-app-wins-for-effective-learning/",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666920X24000316",
+      "quality": "primary",
+      "claimCount": 5
+    },
+    {
+      "url": "https://www.duolingo.com/efficacy/studies",
+      "quality": "primary",
+      "claimCount": 5
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11717304/",
+      "quality": "primary",
+      "claimCount": 5
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2215039025000086",
+      "quality": "primary",
+      "claimCount": 5
+    },
+    {
+      "url": "https://www.trustpilot.com/review/elsaspeak.com",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://lingtuitive.com/blog/best-ai-speaking-apps",
+      "quality": "blog",
+      "claimCount": 5
+    },
+    {
+      "url": "https://languatalk.com/blog/praktika-review/",
+      "quality": "blog",
+      "claimCount": 5
+    },
+    {
+      "url": "https://www.kidsaitools.com/en/articles/ai-tools-for-esl-kids",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.commonsensemedia.org/app-reviews/duolingo",
+      "quality": "unreliable",
+      "claimCount": 0
+    },
+    {
+      "url": "https://www.kidsafeseal.com/certifiedproducts/buddyai_app.html",
+      "quality": "primary",
+      "claimCount": 5
+    }
+  ],
+  "stats": {
+    "angles": 6,
+    "sources": 24,
+    "claims": 35,
+    "verified": 25,
+    "confirmed": 20,
+    "killed": 4,
+    "unverified": 1,
+    "afterSynthesis": 0
+  }
+}

@@ -92,6 +92,10 @@ class MockEngine(DialogEngine):
 class ClaudeEngine(DialogEngine):
     """Claude Agent SDK — 구독 OAuth 토큰(CLAUDE_CODE_OAUTH_TOKEN)으로 인증.
 
+    반드시 Max/Pro '구독'으로만 연결한다 (API 과금 차단):
+    - ANTHROPIC_API_KEY가 환경에 있으면 구독 토큰보다 우선되어 API 과금이
+      발생하므로 시작 시 제거한다.
+    - 구독 토큰이 없으면 기동을 거부한다 (조용히 API로 넘어가는 일 방지).
     ClaudeSDKClient는 연결을 유지하며 멀티턴 대화를 이어간다.
     """
 
@@ -101,7 +105,22 @@ class ClaudeEngine(DialogEngine):
 
     async def _ensure_client(self):
         if self._client is None:
+            import os
+
             from claude_agent_sdk import ClaudeAgentOptions, ClaudeSDKClient
+
+            if os.environ.pop("ANTHROPIC_API_KEY", None):
+                log.warning(
+                    "ANTHROPIC_API_KEY 환경변수를 제거했습니다 — "
+                    "이 앱은 구독(OAuth) 인증만 사용합니다 (API 과금 방지)"
+                )
+            if not os.getenv("CLAUDE_CODE_OAUTH_TOKEN"):
+                raise RuntimeError(
+                    "CLAUDE_CODE_OAUTH_TOKEN이 없습니다. 구독 토큰을 발급해 "
+                    ".env에 넣어주세요:  claude setup-token  (Max/Pro 계정 로그인) "
+                    "— 토큰 없이 테스트하려면 .env에 MOCK_LLM=1"
+                )
+            log.info("Claude 연결: 구독(OAuth 토큰) 인증 — API 과금 없음")
 
             options = ClaudeAgentOptions(
                 system_prompt=SYSTEM_PROMPT,

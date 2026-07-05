@@ -17,5 +17,8 @@ TTS_VOICE = os.getenv("TTS_VOICE", "af_heart")
 MOCK_LLM = os.getenv("MOCK_LLM", "0") == "1"
 CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "sonnet") or None
 
+# 호출어 — "Hey <이름>!" 으로 대화 시작 (핸즈프리 모드)
+WAKE_NAME = os.getenv("WAKE_NAME", "emma").strip().lower()
+
 DB_PATH = str(ROOT / "data" / "ai_english.db")
 WEB_DIR = str(ROOT / "web")

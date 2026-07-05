@@ -72,6 +72,9 @@ class MockEngine(DialogEngine):
 
     async def send(self, user_text: str) -> dict:
         self._turn += 1
+        if not user_text:
+            return {"reply": "Hi there! I'm Emma. How was your day today?",
+                    "corrections": []}
         corrections = []
         if "go to park" in user_text.lower():
             corrections = [{

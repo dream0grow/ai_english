@@ -19,7 +19,10 @@
         <p id="status">버튼을 누르고 영어로 말해보세요</p>
       </div>
     </div>
-    <button id="resetBtn" title="새 대화 시작">새 대화</button>
+    <div class="header-btns">
+      <button id="hfBtn" title="핸즈프리 대화 켜기/끄기">🎙 핸즈프리</button>
+      <button id="resetBtn" title="새 대화 시작">새 대화</button>
+    </div>
   </header>
 
   <main id="chat" aria-live="polite"></main>
@@ -30,7 +33,7 @@
         <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
       </svg>
     </button>
-    <p class="hint" id="hint">누르는 동안 녹음 · 한 번 탭하면 녹음 시작/정지</p>
+    <p class="hint" id="hint">누르는 동안 녹음 · 탭하면 시작/정지 · 🎙 핸즈프리를 켜면 "Hey Emma!"로 대화</p>
   </footer>
 
   <div id="reportModal" class="modal hidden">

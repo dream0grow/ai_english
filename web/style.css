@@ -34,10 +34,20 @@ header {
 .logo { font-size: 30px; }
 h1 { font-size: 20px; }
 #status { font-size: 13px; color: var(--sub); }
-#resetBtn {
+.header-btns { display: flex; gap: 8px; }
+#resetBtn, #hfBtn {
   border: 1.5px solid var(--brand); color: var(--brand); background: none;
   border-radius: 20px; padding: 8px 14px; font-size: 14px; font-weight: 600;
+  white-space: nowrap;
 }
+#hfBtn.active {
+  background: var(--brand); color: #fff;
+  animation: glow 2s infinite;
+}
+@keyframes glow {
+  50% { box-shadow: 0 0 12px rgb(79 109 245 / 55%); }
+}
+#micBtn.dimmed { opacity: .35; }
 
 main {
   flex: 1; overflow-y: auto; padding: 16px;

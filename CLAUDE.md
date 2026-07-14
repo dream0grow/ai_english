@@ -35,9 +35,17 @@ i3-6100U/8GB/Ubuntu)에서 STT→Claude→TTS 파이프라인 구동. 월 추가
   - 검증: MOCK 모드로 WS 프로토콜 전체(호출→인사→대화→교정→종료→standby 복귀) 통과.
     **미검증: Whisper/Kokoro 실모델, 실기기 VAD 체감 튜닝**(원격 환경 huggingface 차단 —
     집 서버 첫 실행 시 확인. VAD 임계값·침묵 판정(END_FRAMES=900ms)은 실사용 후 조정 여지)
-- [ ] **3단계 (다음)**: 가족 프로필(**아이 1명(초등)+성인 2명, 총 3인** 확정), 세션 리포트 확장,
-  단어장, 주제/롤플레이 카드, 기억+재등장 루프(learned_items/family_facts 활용)
-- [ ] 4단계: 간격 반복, 슬랭 커리큘럼, 통계, (선택) 실시간 하이브리드
+- [x] **3단계**: 학습 기능 — 가족 프로필(**아이 1+성인 2, 총 3인**; 온보딩=자기평가 레벨
+  3단계+목표+관심사→family_facts 시드), 아이 프로필 콘텐츠 필터(프롬프트+카드 목록 이중),
+  세션 리포트 확장(교정/새 표현/발화량/스트릭, SQLite 영구 저장), 단어장(교정+taught 자동
+  저장), 주제/롤플레이/슬랭 카드(`server/cards.py`, 1회용 시나리오), 기억+재등장 루프
+  (`<memory>`/`<taught>` 태그 → family_facts/learned_items 저장, 세션 시작 시 프롬프트
+  주입, next_due 간격 1일→2.5일→…)
+  - 검증: MOCK+STT 몽키패치로 E2E 통과(온보딩→카드 필터→대화→저장→리포트→단어장→WS→
+    레거시 DB 마이그레이션). **미검증: 실 Claude가 4태그 형식을 안정 출력하는지**(집 서버
+    확인 필요. 파싱 실패 시 해당 턴만 빈 배열로 폴백하므로 대화는 안 끊김)
+- [ ] **4단계 (다음)**: 간격 반복 고도화, 슬랭 커리큘럼, 통계 대시보드, 레벨 승급 제안
+  (발화 데이터 근거는 3단계 스키마에 쌓이는 중), (선택) 실시간 하이브리드
 
 ## 개발·실행 방법
 
@@ -60,8 +68,9 @@ WHISPER_MODEL=tiny" > .env
 
 | 파일 | 역할 | 주의점 |
 |---|---|---|
-| `server/llm.py` | 대화 엔진 추상화 — **업그레이드/교체 지점** | 출력 계약 {reply, corrections} 유지 |
-| `server/prompts.py` | Recast 프롬프트 v1 | 출력 태그 형식 바꾸면 parse_response도 수정 |
-| `server/main.py` | API: /api/chat, /api/reset | 정적 마운트는 반드시 마지막 |
-| `server/db.py` | SQLite — 3단계용 스키마 이미 포함 | |
-| `web/app.js` | 녹음(hold/tap 토글), 교정 UI, TTS 폴백 | audio_b64 null이면 speechSynthesis 폴백 |
+| `server/llm.py` | 대화 엔진 추상화 — **업그레이드/교체 지점** | 출력 계약 {reply, corrections, memory, taught} 유지. set_system_prompt는 reset() 후 적용 |
+| `server/prompts.py` | 프롬프트 v2 — build_system_prompt(프로필·카드·기억·복습큐 조립) | 출력 태그 형식 바꾸면 parse_response도 수정. 아이 필터는 여기(_CHILD_SAFETY) |
+| `server/cards.py` | 주제/롤플레이/슬랭 카드 데이터 | child_ok=False는 아이에게 목록·선택 모두 차단 |
+| `server/main.py` | API: chat/reset/profiles/cards/notebook/history + WS | 정적 마운트는 반드시 마지막. 활성 프로필·카드는 서버 전역(가족 공용 기기 1대 전제) |
+| `server/db.py` | SQLite — profiles/learned_items/family_facts 실사용 중 | _migrate()가 2단계 레거시 DB 보정. 옛 빈 테이블은 drop 후 재생성 |
+| `web/app.js` | 녹음, 교정 UI, TTS 폴백 + 프로필/온보딩/카드/단어장 | audio_b64 null이면 speechSynthesis 폴백. 시작 시 프로필 선택 강제 |

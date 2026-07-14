@@ -20,10 +20,15 @@
       </div>
     </div>
     <div class="header-btns">
-      <button id="hfBtn" title="핸즈프리 대화 켜기/끄기">🎙 핸즈프리</button>
+      <button id="profileBtn" title="프로필 전환">👤</button>
+      <button id="cardsBtn" title="주제·롤플레이 카드">🃏</button>
+      <button id="notebookBtn" title="단어장">📒</button>
+      <button id="hfBtn" title="핸즈프리 대화 켜기/끄기">🎙</button>
       <button id="resetBtn" title="새 대화 시작">새 대화</button>
     </div>
   </header>
+
+  <div id="cardBanner" class="card-banner hidden"></div>
 
   <main id="chat" aria-live="polite"></main>
 
@@ -36,11 +41,74 @@
     <p class="hint" id="hint">누르는 동안 녹음 · 탭하면 시작/정지 · 🎙 핸즈프리를 켜면 "Hey Emma!"로 대화</p>
   </footer>
 
+  <!-- 세션 리포트 -->
   <div id="reportModal" class="modal hidden">
     <div class="modal-card">
       <h2>📝 오늘의 리포트</h2>
       <div id="reportBody"></div>
-      <button id="reportClose">닫기</button>
+      <button id="reportClose" class="modal-close">닫기</button>
+    </div>
+  </div>
+
+  <!-- 프로필 선택 -->
+  <div id="profileModal" class="modal hidden">
+    <div class="modal-card">
+      <h2>👨‍👩‍👧 누가 대화할까요?</h2>
+      <div id="profileList" class="profile-list"></div>
+      <button id="profileNew" class="ghost-btn">＋ 새 프로필 만들기</button>
+    </div>
+  </div>
+
+  <!-- 온보딩 (프로필 만들기) -->
+  <div id="onboardModal" class="modal hidden">
+    <div class="modal-card">
+      <h2>✨ 프로필 만들기</h2>
+      <form id="onboardForm">
+        <label>이름 (영어 닉네임 추천)
+          <input name="name" required maxlength="20" placeholder="예: Mina" autocomplete="off" />
+        </label>
+        <label>누구인가요?
+          <div class="seg" data-name="kind">
+            <button type="button" data-val="child">🧒 아이 (초등)</button>
+            <button type="button" data-val="adult" class="on">🧑 성인</button>
+          </div>
+        </label>
+        <label>영어로 말할 때 나는…
+          <div class="radio-col" data-name="level">
+            <button type="button" data-val="beginner" class="on">🌱 단어와 짧은 문장으로 말해요 <small>기초</small></button>
+            <button type="button" data-val="intermediate">🌿 일상 대화가 조금씩 돼요 <small>중급</small></button>
+            <button type="button" data-val="advanced">🌳 대부분 편하게 말해요 <small>상급</small></button>
+          </div>
+        </label>
+        <label>영어를 배우는 목표 <small>(선택 — Emma가 대화 방향을 맞춰줘요)</small>
+          <input name="goals" maxlength="80" placeholder="예: 여행 회화 / 회사에서 미팅 / 자유롭게 수다" autocomplete="off" />
+        </label>
+        <label>관심사·요즘 상황 <small>(선택 — Emma가 기억하고 먼저 물어봐요)</small>
+          <input name="interests" maxlength="120" placeholder="예: 축구, 마인크래프트 / 카페 창업 준비 중" autocomplete="off" />
+        </label>
+        <div class="form-btns">
+          <button type="button" id="onboardCancel" class="ghost-btn">취소</button>
+          <button type="submit" class="primary-btn">시작하기</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 카드 (주제/롤플레이/슬랭) -->
+  <div id="cardsModal" class="modal hidden">
+    <div class="modal-card">
+      <h2>🃏 오늘은 뭘 해볼까요?</h2>
+      <div id="cardsBody"></div>
+      <button id="cardsClose" class="modal-close">닫기</button>
+    </div>
+  </div>
+
+  <!-- 단어장 -->
+  <div id="notebookModal" class="modal hidden">
+    <div class="modal-card">
+      <h2>📒 단어장</h2>
+      <div id="notebookBody"></div>
+      <button id="notebookClose" class="modal-close">닫기</button>
     </div>
   </div>
 
